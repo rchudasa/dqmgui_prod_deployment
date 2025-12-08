@@ -43,7 +43,7 @@ D3_GIT_TAG=v2.7.4
 
 # JSROOT
 JSROOT_GIT_URL=https://github.com/root-project/jsroot
-JSROOT_GIT_TAG=5.1.0
+JSROOT_GIT_TAG=6.3.4
 
 # ROOT
 # Overriden by GitHub actions secrets.
