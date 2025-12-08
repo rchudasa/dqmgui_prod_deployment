@@ -60,11 +60,6 @@ jobs:
 
           " >> /tmp/release_body.md
           echo "RELEASE_TAG=${RELEASE_TAG}" >> $GITHUB_ENV
-          if [ "$GITHUB_REF_NAME" != "main" ]; then
-            echo "IS_PRERELEASE=true" >> $GITHUB_ENV
-          else
-            echo "IS_PRERELEASE=false" >> $GITHUB_ENV
-          fi
       - name: Archive package artifact
         uses: actions/upload-artifact@v4
         with:
@@ -75,6 +70,8 @@ jobs:
       # without a GitHub account.
       - name: Release
         uses: ncipollo/release-action@v1
+        env:
+          IS_PRERELEASE: ${{ vars.IS_PRERELEASE }}
         with:
           artifacts: "/tmp/dqmgui/dqmgui_${{ env.RELEASE_TAG }}.tar.gz"
           bodyFile: "/tmp/release_body.md"
