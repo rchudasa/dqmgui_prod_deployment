@@ -121,8 +121,8 @@ preliminary_checks() {
 
     # Delete installation (config & sw, does not delete state)
     if [ -d "${INSTALLATION_DIR:?}/${DMWM_GIT_TAG:?}" ]; then
-        echo "WARNING: $INSTALLATION_DIR/$DMWM_GIT_TAG exists, deleting contents (except auth)"
-        find "${INSTALLATION_DIR:?}/${DMWM_GIT_TAG:?}/" -maxdepth 1 -mindepth 1 -type d ! -path . ! -name auth -exec rm -rf {} \;
+        echo "WARNING: $INSTALLATION_DIR/$DMWM_GIT_TAG exists, deleting contents"
+        rm -rf "${INSTALLATION_DIR:?}/${DMWM_GIT_TAG:?}/"
     fi
 
 }
