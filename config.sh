@@ -17,8 +17,8 @@ DMWM_GIT_TAG=master
 
 # DQMGUI tag to use, see https://github.com/cms-DQM/dqmgui_prod/tags
 # Overriden by GitHub actions secrets.
-DQMGUI_GIT_URL=https://github.com/cms-DQM/dqmgui_prod
-DQMGUI_GIT_TAG=10.0.0
+DQMGUI_GIT_URL=https://github.com/ywkao/dqmgui_prod
+DQMGUI_GIT_TAG=10.3.2.3
 
 # Boost.GIL. At most version 1.67!! The API changed radically after that.
 BOOST_GIL_GIT_URL=https://github.com/boostorg/gil
